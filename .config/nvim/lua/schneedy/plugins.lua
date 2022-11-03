@@ -30,7 +30,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 
 	-- theme
-	use("folke/tokyonight.nvim")
+	use("olivercederborg/poimandres.nvim")
 
 	-- handy stuff
 	use("tpope/vim-surround")
