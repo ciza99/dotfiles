@@ -1,8 +1,11 @@
 local setup, null_ls = pcall(require, "null-ls")
-if not setup then	return end
+if not setup then
+	return
+end
 
 local formatting = null_ls.builtins.formatting -- to setup formatters
 local diagnostics = null_ls.builtins.diagnostics -- to setup linters
+local gitsigns = null_ls.builtins.code_actions.gitsigns -- to setup gitsigns
 
 -- to setup format on save
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -13,6 +16,7 @@ null_ls.setup({
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
 		formatting.prettier,
 		formatting.stylua,
+		gitsigns,
 		diagnostics.eslint_d.with({
 			condition = function(utils)
 				return utils.root_has_file(".eslintrc.js")

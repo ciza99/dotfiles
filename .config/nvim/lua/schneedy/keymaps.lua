@@ -5,6 +5,9 @@ vim.g.mapleader = " "
 -- exit insert mode
 map.set("i", "jj", "<ESC>")
 
+-- exit visual mode
+map.set("v", "<leader>jj", "<ESC>")
+
 -- dont copy to buffer on deleting char
 map.set("n", "x", '"_x')
 
@@ -14,6 +17,10 @@ map.set("n", "<leader>nh", ":nohl<CR>")
 -- increment / decrement
 map.set("n", "+", "<C-a>")
 map.set("n", "-", "<C-x>")
+
+-- tabs
+map.set("v", "<", "<gv")
+map.set("v", ">", ">gv")
 
 -- window management
 map.set("n", "<leader>sv", "<C-w>v") -- split window vertically

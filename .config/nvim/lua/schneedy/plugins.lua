@@ -82,6 +82,7 @@ return packer.startup(function(use)
 		end,
 	})
 	use("nvim-treesitter/nvim-treesitter-context")
+	use("p00f/nvim-ts-rainbow")
 
 	-- brackets and tags automatic closing
 	use("windwp/nvim-autopairs")
