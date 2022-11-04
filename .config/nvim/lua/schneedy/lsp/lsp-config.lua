@@ -57,9 +57,7 @@ lspconfig["tsserver"].setup({
 
 lspconfig["rust_analyzer"].setup({
 	on_attach = on_attach,
-	settings = {
-		["rust-analyzer"] = {},
-	},
+	capabilities = capabilities,
 })
 
 lspconfig["tailwindcss"].setup({
